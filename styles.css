@@ -1,0 +1,161 @@
+:root {
+    --Moderate-violet: hsl(263, 55%, 52%);
+    --Very-dark-grayish-blue: hsl(217, 19%, 35%);
+    --Very-dark-blackish-blue: hsl(219, 29%, 14%);
+
+    --Light-gray: hsl(0, 0%, 81%);
+    --Light-grayish-blue: hsl(210, 46%, 95%);
+
+    /* 1. "Verified Graduate" has the same color as the person's name with 50% opacity
+    2. Review paragraphs inside the quotations have the same color as well, but are at 70% opacity */
+
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    background-color: var(--Light-gray);
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+.card {
+    width: 90%;
+    margin: 0 auto;
+    padding: 25px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border-radius: 15px;
+}
+
+.grid--container {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 15px;
+}
+
+h3 {
+    font-size: 2rem;
+    margin-bottom: 2px;
+}
+
+h2 {
+    font-size: 2.2rem;
+}
+
+span, p {
+    font-size: 1.8rem;
+}
+
+img {
+    border-radius: 70%;
+}
+
+.pinfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.dc {
+    position: relative;
+    background-color: var(--Moderate-violet);
+    z-index: 1;
+}
+
+.quote {
+    position: absolute;
+    z-index: -1;
+    top: 2%;
+    right: 15%;
+    width: 104px;
+    height: 102px;
+    border-radius: 0;
+}
+
+.jw {
+    background-color: var(--Very-dark-grayish-blue);
+}
+
+.pa {
+    background-color: var(--Very-dark-blackish-blue);
+}
+
+.kw, .jh {
+    background-color: white;
+}
+
+
+
+.dc h2, .dc h3, .jw h2, .jw h3, .pa h3, .pa h2 {
+    color: white;
+}
+
+.dc span, .dc p, .jw span, .jw p, .pa p, .pa span {
+    color: rgba(255, 255, 255, 0.50);
+}
+
+.kw h2, .jh h2, .kw h3, .jh h3 {
+    color: var(--Very-dark-grayish-blue);
+}
+
+.kw p, .jh p, .kw span, .jh span {
+    color: hsla(217, 19%, 35%, 0.50);
+}
+
+.pa img {
+    border: 3px solid var(--Moderate-violet);
+}
+
+.dc .grid--container img {
+    border: 3px solid hsl(263, 75%, 70%);
+}
+
+@media (min-width: 720px) {
+    main {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 15px;
+        width: 95%;
+        margin: 0 auto;
+        padding: 15px;
+    }
+
+    .card {
+        margin: 0;
+        width: 100%;
+    }
+
+    .dc {
+        grid-area: 1 / 1 / 2 / 3;
+    }
+
+    .jw {
+        grid-area: 1 / 3 / 2 / 4;
+    }
+
+    .kw {
+        grid-area: 1 / 4 / 3 / 5;
+    }
+
+    .jh {
+        grid-area: 2 / 1 / 3 / 2;
+    }
+
+    .pa {
+        grid-area: 2 / 2 / 3 / 4;
+    }
+
+}

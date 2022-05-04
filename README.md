@@ -30,4 +30,4 @@ Your users should be able to:
 - CSS Grid
 - Mobile-first workflow
 
-### You can check it out here: 
+### You can check it out here: https://testimonials-grid-section-orangel.netlify.app/

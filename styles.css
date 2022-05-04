@@ -15,7 +15,7 @@ html {
     box-sizing: border-box;
     font-size: 62.5%;
     font-family: 'Barlow Semi Condensed', sans-serif;
-    background-color: var(--Light-gray);
+    background-color: var(--Light-grayish-blue);
 }
 
 *, *:before, *:after {
